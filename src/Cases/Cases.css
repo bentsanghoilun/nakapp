@@ -17,4 +17,8 @@
         padding: 48px 0px;
         left:50%;
     }
+    .cases > ul{
+        width: 100%;
+        border-left: 0.3rem solid black;
+    }
 }
