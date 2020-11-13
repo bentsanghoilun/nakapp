@@ -8,13 +8,14 @@
 .cases > ul{
     width: 100%;
     border-left: 6px solid black;
+    padding-top: 48px;
 }
 @media all and (max-width: 600px){
     .cases{
         width: 50%;
         min-height: 50%;
         position: relative;
-        padding: 48px 0px;
+        padding: 50% 0px;
         left:50%;
     }
     .cases > ul{

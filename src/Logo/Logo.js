@@ -1,13 +1,32 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect, useRef} from 'react';
 import './Logo.css';
 import { useSpring, animated } from 'react-spring';
 
+
 const Logo = props => {
-    const [state, toggle] = useState(true)
-    const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } })
+    const [state, toggle] = useState(true);
+    const [stick, setStick] = useState(false);
+    const ref = useRef(null);
+    const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } });
+
+    const handleScroll = () => {
+        if (ref.current) {
+            setStick(ref.current.getBoundingClientRect().top <= 0);
+            console.log(ref.current.getBoundingClientRect().top <= 0);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', () => handleScroll);
+        };
+    }, []);
+    
 
     return(
-        <div className="logo">
+        <div className={`logo${stick ? ' stick': ''}`} ref={ref}>
             <animated.svg width="613" height="148" viewBox="0 0 613 148" fill="none" xmlns="http://www.w3.org/2000/svg"
                 style={{
                     opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),

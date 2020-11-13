@@ -16,14 +16,32 @@ function makeid(length) {
  }
 
 const Cases = props => {
+    const tags = [
+        "Stage",
+        "Exhibition",
+        "Fabrication",
+        "Event/Show",
+        "Roadshow",
+        "Interior",
+        "Mall Decoration"
+    ];
+
     let CASES = [];
     const CASES_COUNT = Math.ceil(Math.random()*15)+15;
     for(var i = 0; i < CASES_COUNT; i++){
         const ww = Math.ceil(Math.random()*200)+600;
         const hh = Math.ceil(Math.random()*100)+400;
+        let temptags = tags;
+        const thistags = [];
+        for(var j = 0; j <= Math.floor(Math.random()*1)+1; j++){
+            var targ = Math.floor(Math.random()*temptags.length);
+            thistags[j] = temptags[targ];
+            //temptags.splice(targ);
+        }
         CASES[i] = {
             title: makeid(Math.ceil(Math.random()*12)+8),
             image: 'https://picsum.photos/'+ww+'/'+hh+'?random='+i,
+            tags: thistags,
         }
     };
 
@@ -37,6 +55,7 @@ const Cases = props => {
                             key={CASE.title}
                             title={CASE.title}
                             image={CASE.image}
+                            tags={CASE.tags}
                         />
                     ))
                 }

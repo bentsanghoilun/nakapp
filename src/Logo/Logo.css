@@ -1,12 +1,40 @@
+.logo{
+    top: -3px;
+    z-index: 9999;
+    background-color: white;
+    padding: 12px 12px 12px 0px;
+}
 .logo > svg{
     height: 64px;
     width: auto;
     padding-right: 0px;
+    top: auto;
+    left: auto;
+}
+.stick > svg{
+    position: fixed;
+    top:0px;
+    background-color: white;
+    padding: 12px 12px 12px 0px;
+    box-sizing: content-box;
 }
 @media all and (max-width: 600px){
+    .logo{
+        top: 0px;
+        padding: 12px 12px 12px 0px;
+        width: 100%;
+    }
     .logo > svg{
         height: auto;
-        width: 80%;
+        width: 100%;
         padding-right: 0px;
+    }
+    .stick > svg{
+        position: fixed;
+        top:0px;
+        background-color: white;
+        padding: 12px 12px 12px 0px;
+        box-sizing: content-box;
+        width: 50%;
     }
 }
