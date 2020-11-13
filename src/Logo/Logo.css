@@ -1,8 +1,8 @@
 .logo{
-    top: -3px;
     z-index: 9999;
     background-color: white;
     padding: 12px 12px 12px 0px;
+    min-height: 64px;
 }
 .logo > svg{
     height: 64px;
@@ -10,6 +10,9 @@
     padding-right: 0px;
     top: auto;
     left: auto;
+}
+.stick {
+    min-height: 91px;
 }
 .stick > svg{
     position: fixed;
