@@ -1,0 +1,10 @@
+.thumb{
+    width: 100%;
+    height: auto;
+}
+@media all and (max-width: 600px){
+    .thumb{
+        width: 100%;
+        height: auto;
+    }
+}

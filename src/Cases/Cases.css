@@ -1,0 +1,20 @@
+.cases{
+    width: 40%;
+    min-height: 50%;
+    position: relative;
+    padding: 20% 0px;
+    left:50%;
+}
+.cases > ul{
+    width: 100%;
+    border-left: 6px solid black;
+}
+@media all and (max-width: 600px){
+    .cases{
+        width: 50%;
+        min-height: 50%;
+        position: relative;
+        padding: 48px 0px;
+        left:50%;
+    }
+}
