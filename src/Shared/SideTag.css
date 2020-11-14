@@ -1,0 +1,17 @@
+.sidetag{
+    padding: 6px;
+    text-align: end;
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 40%;
+    left: 0%;
+    font-size: small;
+    font-family: 'Space Mono', monospace;
+    writing-mode: vertical-rl;
+}
+@media all and (max-width: 600px){
+    .sidetag{
+        display: none;
+    }
+}

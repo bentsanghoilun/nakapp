@@ -1,5 +1,4 @@
-import React from 'react';
-
+import {React, useEffect} from 'react';
 import Logo from '../Logo/Logo';
 import Case from './Case';
 
@@ -16,6 +15,10 @@ function makeid(length) {
  }
 
 const Cases = props => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     const tags = [
         "Stage",
         "Exhibition",
@@ -48,6 +51,7 @@ const Cases = props => {
     return(
         <section className="cases">
             <Logo />
+            <h4>/Our Works</h4>
             <ul>
                 {
                     CASES.map(CASE => (

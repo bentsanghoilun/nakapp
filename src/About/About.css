@@ -1,0 +1,58 @@
+.about{
+    width: 40%;
+    min-height: 50%;
+    position: relative;
+    padding: 20% 0px 5% 0px;
+    left:50%;
+}
+.about > ul{
+    width: 100%;
+    border-left: 6px solid black;
+    padding-top: 48px;
+}
+
+.about li{
+    width: 100%;
+    list-style: none;
+    padding: 24px;
+    cursor: default;
+}
+.about li h2{
+    background-color: black;
+    padding: 12px;
+    color: #fff;
+    display: inline-block;
+    z-index: 99;
+}
+
+.about li:nth-child(even){
+    left: -100%;
+    text-align: right;
+}
+@media all and (max-width: 600px){
+    .about{
+        width: 50%;
+        min-height: 50%;
+        position: relative;
+        padding: 50% 0px;
+        left:50%;
+    }
+    .about > ul{
+        width: 100%;
+        border-left: 0.3rem solid black;
+    }
+    .about li{
+        width: 200%;
+        list-style: none;
+        padding: 24px;
+        cursor: pointer;
+    }
+    .about li:nth-child(odd){
+        left: -100%;
+        text-align: right;
+    }
+    .about li:nth-child(even){
+        left: -100%;
+        text-align: right;
+    }
+}

@@ -70,6 +70,8 @@ const Logo = props => {
                     }}
                     d="M562.696 61.6041L611.718 0.268304H592.173L535.3 71.4242V0.16098H520.134V147.946H535.3V95.6795L552.549 74.2146L595.484 148H613L562.696 61.6041Z" fill="black"/>
             </animated.svg>
+            <br></br>
+            <sup style={{zIndex:'-9'}}>CONCEPT LIMITED</sup>
         </div>
     )
 }

@@ -30,16 +30,17 @@ const Image = props => {
                 onLoad={() => setIsLoad(true)}
                 alt={props.title}
             />
-            <div className="tags">
-                <div style={{
-                    background: randomColor(),
-                }}></div>
-                {
-                    props.tags.map(tag => (
-                        <span key={tag + (Math.random()*999)} >{tag}</span>
-                    ))
-                }
-            </div>
+            {
+                props.tags &&
+                <div className="tags">
+                    <div style={{background: randomColor(),}}></div>
+                    {
+                        props.tags.map(tag => (
+                            <span key={tag + (Math.random()*999)} >{tag}</span>
+                        ))
+                    }
+                </div>
+            }
         </div>
     )
 }

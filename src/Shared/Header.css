@@ -1,0 +1,95 @@
+.header{
+    position: fixed;
+    top: 0px;
+    left: 15%;
+    min-width: 20%;
+    height: 50%;
+    background: black;
+    width: 35%;
+    z-index: 999999;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-items: flex-end;
+    justify-content: flex-end;
+    top:-50%;
+}
+.header.open{
+    top: 0%;
+}
+.header > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: flex-end;
+    justify-items: flex-end;
+    justify-content: flex-end;
+}
+.header a{
+    display: block;
+    font-family: 'Space Mono', monospace;
+    text-align: end;
+    padding: 0.6em 16px;
+    position: relative;
+    background: black;
+    color: white;
+    transition: 500ms;
+    width: 100%;
+}
+.header > .navToggle{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    bottom:-64px;
+    align-items: center;
+    font-size: xxx-large;
+    left: 0px;
+    transition: 500ms;
+}
+.header > .navToggle > svg{
+    width: 50%;
+    height: 50%;
+    transition: 500ms;
+}
+.header a:hover, .header > .navToggle:hover{
+    background-color: white;
+    color: black;
+}
+.header.open > .navToggle > svg{
+    transform: rotate(90deg);
+}
+.header > .navToggle:hover > svg > rect{
+    fill: black;
+}
+.header .copyright{
+    padding: 6px;
+    text-align: end;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: small;
+    font-family: 'Space Mono', monospace;
+    display: none;
+}  
+
+@media all and (max-width: 600px){
+    .header{
+        left: 5%;
+        width: 45%;
+    }
+    .header .copyright{
+        display: block;
+        text-align: left;
+    }
+}
