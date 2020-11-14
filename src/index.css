@@ -35,12 +35,12 @@ p{
 a{
   display: inline-block;
   text-decoration: none;
-  color: darkslateblue;
+  color: rgb(38, 35, 255);
   transition: 500ms;
   background-color: white;
 }
 a:hover{
-  color: darkred;
+  color: rgb(255, 104, 44);
 }
 .box{
   padding: 2rem;
@@ -83,6 +83,12 @@ code {
   body{
     font-size: large;
   }
+  h4{
+    font-family: 'Space Mono', monospace;
+    background-color: white;
+    padding: 1rem;
+    font-size: x-large;
+  }
   .neolist{
     width: 50%;
     min-height: 50%;
@@ -102,10 +108,10 @@ code {
   }
   .neolist li:nth-child(odd){
       left: -100%;
-      text-align: right;
+      text-align: left;
   }
   .neolist li:nth-child(even){
       left: -100%;
-      text-align: right;
+      text-align: left;
   }
 }
