@@ -42,7 +42,7 @@ const Cases = props => {
             //temptags.splice(targ);
         }
         CASES[i] = {
-            title: makeid(Math.ceil(Math.random()*12)+8),
+            title: makeid(Math.ceil(Math.random()*4)+8),
             image: 'https://picsum.photos/'+ww+'/'+hh+'?random='+i,
             tags: thistags,
         }

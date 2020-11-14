@@ -44,7 +44,7 @@ const About = props => {
                         <h4>FAN KWOK WAI</h4>
                         <div className=''>
                             <a href='tel:+85261947501'>T: +852 6194 7501</a><br></br>
-                            <a href='mailto:nakconcept@gmail.com'>E: nakconcept@gmail.com</a>
+                            <a href='mailto:EMAIL: wai.fan@nakconcept.com'>E: wai.fan@nakconcept.com</a>
                         </div>
                     </Fade>
                 </li>

@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom
 
 import Cases from './Cases/Cases';
 import About from './About/About';
+import Contact from './Contact/Contact';
 import Footer from './Shared/Footer';
 import Header from './Shared/Header';
 import Sidetag from './Shared/SideTag';
@@ -24,7 +25,7 @@ const App = () => {
             <About />
           </Route>
           <Route path="/contact">
-            <h2>Contacts</h2>
+            <Contact />
           </Route>
           <Redirect to="/" />
         </Switch>
