@@ -9,7 +9,7 @@ const Case = props => {
         <li style={{minHeight: window.innerHeight/2}} className="case">
             <Fade bottom>
                 <h2>{props.title}</h2>
-                <Image image={props.image} tags={props.tags} />
+                <Image image={props.image} tag={props.tag} />
             </Fade>
         </li>
     )

@@ -15,7 +15,7 @@ const Logo = props => {
     const handleScroll = () => {
         if (ref.current) {
             setStick(ref.current.getBoundingClientRect().top <= 0);
-            console.log(ref.current.getBoundingClientRect().top <= 0);
+            //console.log(ref.current.getBoundingClientRect().top <= 0);
         }
     };
 

@@ -20,7 +20,6 @@ const Image = props => {
                 !isLoad && 
                 <Skeleton 
                     style={{display: isLoad}}
-                    // width={mb ? ((ww)-96) : (ww/2-96)}
                     height={wh/3}
                 />
             }
@@ -31,14 +30,10 @@ const Image = props => {
                 alt={props.title}
             />
             {
-                props.tags &&
+                props.tag &&
                 <div className="tags">
                     <div style={{background: randomColor(),}}></div>
-                    {
-                        props.tags.map(tag => (
-                            <span key={tag + (Math.random()*999)} >{tag}</span>
-                        ))
-                    }
+                    <span key={props.tag + (Math.random()*999)} >{props.tag}</span>
                 </div>
             }
         </div>
