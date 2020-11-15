@@ -80,6 +80,12 @@ code {
 }
 
 @media all and (max-width: 600px){
+  *{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    box-sizing: border-box;
+  }
   body{
     font-size: large;
   }
