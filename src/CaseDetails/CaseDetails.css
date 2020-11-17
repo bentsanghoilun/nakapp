@@ -56,3 +56,6 @@
     color: white;
     background-color: black;
 }
+.caseDetails .caseNav > a:hover rect{
+    fill: white;
+}
