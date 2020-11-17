@@ -44,18 +44,24 @@ const CaseDetails = props => {
                             </p>
                             <br></br>
                             <div className='caseNav'>
-                                <Link to={'/cases/case'+(data.key-1)}>
-                                    <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="0.452271" y="8.60371" width="11.5279" height="1.21346" transform="rotate(-45 0.452271 8.60371)" fill="black"/>
-                                        <rect x="1.3103" y="7.78842" width="11.5279" height="1.21346" transform="rotate(45 1.3103 7.78842)" fill="black"/>
-                                    </svg>
-                                </Link>
-                                <Link to={'/cases/case'+(data.key+1)}>
-                                    <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="10" y="8.64647" width="11.5279" height="1.21346" transform="rotate(135 10 8.64647)" fill="black"/>
-                                        <rect x="9.14197" y="9.46176" width="11.5279" height="1.21346" transform="rotate(-135 9.14197 9.46176)" fill="black"/>
-                                    </svg>
-                                </Link>
+                                {
+                                    data.key-1 >= 0 &&
+                                    <Link to={'/cases/case'+(data.key-1)}>
+                                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.452271" y="8.60371" width="11.5279" height="1.21346" transform="rotate(-45 0.452271 8.60371)" fill="black"/>
+                                            <rect x="1.3103" y="7.78842" width="11.5279" height="1.21346" transform="rotate(45 1.3103 7.78842)" fill="black"/>
+                                        </svg>
+                                    </Link>
+                                }
+                                {
+                                    data.key+1 < 30 &&
+                                    <Link to={'/cases/case'+(data.key+1)}>
+                                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="10" y="8.64647" width="11.5279" height="1.21346" transform="rotate(135 10 8.64647)" fill="black"/>
+                                            <rect x="9.14197" y="9.46176" width="11.5279" height="1.21346" transform="rotate(-135 9.14197 9.46176)" fill="black"/>
+                                        </svg>
+                                    </Link>
+                                }
                             </div>
                         </div>
                     </Fade>
