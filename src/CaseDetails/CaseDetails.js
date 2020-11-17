@@ -18,7 +18,7 @@ const CaseDetails = props => {
         const getCaseDetails = async () => {
             const response = await fetch('https://ben-tsang-node.herokuapp.com/nak/api/case/'+id);
             const responseData = await response.json();
-            setdata(responseData.caseDetails);
+            setdata(responseData);
             console.log(responseData);
             
             setisLoaded(true);
