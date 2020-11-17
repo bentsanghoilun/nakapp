@@ -1,3 +1,14 @@
 .footer{
     text-align: center;
+    background: black;
+    position: fixed;
+    display: inline-block;
+    bottom: 0px;
+    right: 10%;
+}
+.footer > p{
+    padding: 12px;
+    background: none;
+    color: #888;
+    font-size: small;
 }

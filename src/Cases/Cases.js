@@ -29,9 +29,10 @@ const Cases = props => {
                     isLoaded && loadedCases &&
                     loadedCases.map(loadedCase => (
                         <Case 
+                            id={loadedCase.id}
                             key={loadedCase.title}
                             title={loadedCase.title}
-                            image={loadedCase.image[0]}
+                            image={loadedCase.image[0].src}
                             tag={loadedCase.tag}
                         />
                     ))

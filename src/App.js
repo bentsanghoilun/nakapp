@@ -8,6 +8,7 @@ import Contact from './Contact/Contact';
 import Footer from './Shared/Footer';
 import Header from './Shared/Header';
 import Sidetag from './Shared/SideTag';
+import CaseDetails from './CaseDetails/CaseDetails';
 
 import './App.css';
 
@@ -20,6 +21,9 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Cases />
+          </Route>
+          <Route path="/cases/:id" exact>
+            <CaseDetails />
           </Route>
           <Route path="/about">
             <About />

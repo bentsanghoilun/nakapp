@@ -4,6 +4,9 @@
     padding: 24px;
     cursor: pointer;
 }
+.case div:first-of-type{
+    z-index: 99;
+}
 .case h2{
     background-color: black;
     padding: 12px;

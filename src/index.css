@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Space+Mono&display=swap');
-
+html{
+  background-color: black;
+}
 *{
   margin: 0px;
   padding: 0px;

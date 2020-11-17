@@ -1,0 +1,15 @@
+.neodrawback{
+    background-color: black;
+    transition: 800ms;
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.neodrawback.show{
+    width: 100px;
+    height: 100px;
+    transform: scale(50);
+    transform-origin: center;
+}
