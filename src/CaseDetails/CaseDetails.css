@@ -82,7 +82,7 @@
     }
     .caseDetails > .mbGallery{
         width: 100vw;
-        height: 50vh;
+        height: auto;
         top: 0px;
         left: 0px;
         background-color: #000;

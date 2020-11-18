@@ -14,11 +14,12 @@ const CaseDetails = props => {
     console.log(id);
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false,
         //centerMode: true,
         //adaptiveHeight: true
     };

@@ -7,7 +7,7 @@ const Header = props => {
     const [isOpen, setIsOpen] = useState(false);
     return(
         <header className={`header${isOpen?' open':''}`}>
-            <p className='copyright'><span style={{fontFamily:'sans-serif'}}>&#169;</span> {new Date().getFullYear()}. NAK Concept LTD.</p>
+            <p className='copyright'><span style={{fontFamily:'sans-serif'}}>&#169;</span> {new Date().getFullYear()}. NAK Concept LTD.<br></br><br></br>Designed by <a href='' target='_blank'>TSANGHOILUN</a></p>
             <div>
                 <Link to='/' onClick={() => {isOpen ? setIsOpen(false):setIsOpen(true)}}>Our Works</Link>
                 <Link to='/about' onClick={() => {isOpen ? setIsOpen(false):setIsOpen(true)}}>About Us</Link>

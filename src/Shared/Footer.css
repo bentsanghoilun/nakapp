@@ -12,3 +12,8 @@
     color: #888;
     font-size: small;
 }
+@media all and (max-width: 600px){
+    .footer{
+        display: none;
+    }
+}
