@@ -16,7 +16,9 @@
 .caseDetails h2{
     color: white;
 }
-
+.caseDetails > .mbGallery{
+    display: none;
+}
 .caseDetails > .details{
     width: 30%;
     height: 100%;
@@ -58,4 +60,49 @@
 }
 .caseDetails .caseNav > a:hover rect{
     fill: white;
+}
+
+@media all and (max-width: 600px){
+    .caseDetails *{
+        display: block;
+    }
+    .caseDetails > .gallery{
+        width: 60%;
+        left: 40%;
+        top: 0%;
+        display: none;
+        position: relative;
+    }
+    .caseDetails > .details{
+        width: 100vw;
+        height: 50vh;
+        position: relative !important;
+        top: 0%;
+        left: 0px;
+    }
+    .caseDetails > .mbGallery{
+        width: 100vw;
+        height: 50vh;
+        top: 0px;
+        left: 0px;
+        background-color: #000;
+        display: block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .caseDetails > .details *{
+        background: none;
+        color: white;
+    }
+    .caseDetails > .details .caseNav{
+        width: 100%;
+    }
+    .caseDetails h4{
+        font-size: small;
+        background: white !important;
+        color: black !important;
+        display: inline-block;
+    }
 }

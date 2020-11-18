@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
-import GalleryImage from './GalleryImage';
+import GalleryImg from './GalleryImg';
+import Slider from "react-slick";
 
 import './CaseDetails.css';
 
@@ -11,6 +12,16 @@ const CaseDetails = props => {
     const [data, setdata] = useState();
     const id = useParams().id;
     console.log(id);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        //centerMode: true,
+        //adaptiveHeight: true
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -24,10 +35,20 @@ const CaseDetails = props => {
             setonChange(false);
         }
         getCaseDetails();
-    }, [onChange]);
+    }, [id]);
 
     return(
         <section className='caseDetails' >
+            <div className='mbGallery'>
+            {
+                isLoaded && data &&
+                <Slider {...settings} >
+                {data.image.map(img => (
+                    <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
+                ))}
+                </Slider>
+            }
+            </div>
             <div className='details'>
                 {
                     isLoaded && data &&
@@ -71,7 +92,7 @@ const CaseDetails = props => {
                 {
                     isLoaded && data &&
                         data.image.map(img =>(
-                            <GalleryImage src={img.src} key={img.src} ww={img.width} hh={img.height} />
+                            <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
                         ))
                 }
             </div>

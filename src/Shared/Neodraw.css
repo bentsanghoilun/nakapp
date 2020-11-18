@@ -8,8 +8,8 @@
     left: 50%;
 }
 .neodrawback.show{
-    width: 100px;
-    height: 100px;
-    transform: scale(50);
+    width: 10vw;
+    height: 10vh;
+    transform: scale(20);
     transform-origin: center;
 }
