@@ -10,7 +10,7 @@ const Case = props => {
     return(
         <li style={{minHeight: window.innerHeight/2}} className="case" onClick={() => {setisClicked(true)}}>
             <Fade bottom>
-                <Neodraw isClicked={isClicked} style={{zIndex:"999"}} caseId={props.id}>{props.title}</Neodraw>
+                <Neodraw isClicked={isClicked} style={{zIndex:"999"}} caseId={props.id}>{props.client}</Neodraw>
                 <Image image={props.image} tag={props.tag} />
             </Fade>
         </li>

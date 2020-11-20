@@ -10,6 +10,7 @@ const CaseDetails = props => {
     const [isLoaded, setisLoaded] = useState(false);
     const [onChange, setonChange] = useState(false);
     const [data, setdata] = useState();
+    const [caseTotal, setcaseTotal] = useState(0);
     const id = useParams().id;
     console.log(id);
 
@@ -29,7 +30,8 @@ const CaseDetails = props => {
         const getCaseDetails = async () => {
             const response = await fetch('https://ben-tsang-node.herokuapp.com/nak/api/case/'+id);
             const responseData = await response.json();
-            setdata(responseData);
+            setdata(responseData.caseDetails);
+            setcaseTotal(responseData.caseTotal);
             console.log(responseData);
             
             setisLoaded(true);
@@ -44,7 +46,7 @@ const CaseDetails = props => {
             {
                 isLoaded && data &&
                 <Slider {...settings} >
-                {data.image.map(img => (
+                {data.img.map(img => (
                     <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
                 ))}
                 </Slider>
@@ -57,10 +59,10 @@ const CaseDetails = props => {
                         <div>
                             <h4>{data.tag}/</h4>
                             <br></br>
-                            <h2 className='box'>{data.title}</h2>
+                            <h2 className='box'>{data.client}</h2>
                             <br></br>
                             <p>
-                                Client: {data.client}
+                                Event: {data.title}
                                 <br></br>
                                 Venue: {data.venue}
                             </p>
@@ -76,7 +78,7 @@ const CaseDetails = props => {
                                     </Link>
                                 }
                                 {
-                                    data.key+1 < 30 &&
+                                    data.key+1 < caseTotal &&
                                     <Link to={'/cases/case'+(data.key+1)} onClick={() => setonChange(true)}>
                                         <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="10" y="8.64647" width="11.5279" height="1.21346" transform="rotate(135 10 8.64647)" fill="black"/>
@@ -92,7 +94,7 @@ const CaseDetails = props => {
             <div className='gallery'>
                 {
                     isLoaded && data &&
-                        data.image.map(img =>(
+                        data.img.map(img =>(
                             <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
                         ))
                 }

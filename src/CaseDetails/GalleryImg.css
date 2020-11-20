@@ -1,10 +1,9 @@
 .gallery-image{
     opacity: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     padding: 48px;
-    border: 16px solid black;
 }
 .gallery-image[loaded='1']{
     opacity: 1;

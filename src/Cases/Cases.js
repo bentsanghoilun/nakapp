@@ -32,7 +32,8 @@ const Cases = props => {
                             id={loadedCase.id}
                             key={loadedCase.title}
                             title={loadedCase.title}
-                            image={loadedCase.image[0].src}
+                            client={loadedCase.client}
+                            image={loadedCase.img[0].src}
                             tag={loadedCase.tag}
                         />
                     ))
