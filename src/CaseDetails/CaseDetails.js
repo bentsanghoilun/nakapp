@@ -40,14 +40,17 @@ const CaseDetails = props => {
         getCaseDetails();
     }, [id]);
 
+    const total = 0;
+
     return(
         <section className='caseDetails' >
             <div className='mbGallery'>
             {
                 isLoaded && data &&
                 <Slider {...settings} >
-                {data.img.map(img => (
-                    <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
+                {
+                    data.img.map((img, index) => (
+                    <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} index={index+1} total={data.img.length} />
                 ))}
                 </Slider>
             }
@@ -94,8 +97,8 @@ const CaseDetails = props => {
             <div className='gallery'>
                 {
                     isLoaded && data &&
-                        data.img.map(img =>(
-                            <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} />
+                        data.img.map((img, index) =>(
+                            <GalleryImg src={img.src} key={img.src} ww={img.width} hh={img.height} index={index+1} total={data.img.length} />
                         ))
                 }
             </div>

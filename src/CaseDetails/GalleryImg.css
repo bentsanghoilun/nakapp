@@ -13,6 +13,10 @@
 .gallery-image[loaded='1']:hover{
     padding: 0px;
 }
+.gallery-image-index{
+    display: none !important;
+}
+
 @media all and (max-width: 600px){
     .gallery-image{
         opacity: 1 !important;
@@ -26,5 +30,15 @@
     .gallery-image[loaded='1']{
         opacity: 1;
         
+    }
+    .gallery-image-index{
+        display: inline-block !important;
+        color: white;
+        font-size: 14px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 8px;
+        background: rgba(0,0,0,0.5);
     }
 }

@@ -105,4 +105,7 @@
         color: black !important;
         display: inline-block;
     }
+    .caseDetails > .details br{
+        display: none;
+    }
 }
