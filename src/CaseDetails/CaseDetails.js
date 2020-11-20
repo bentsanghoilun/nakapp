@@ -22,7 +22,7 @@ const CaseDetails = props => {
         slidesToScroll: 1,
         arrows: false,
         //centerMode: true,
-        //adaptiveHeight: true
+        adaptiveHeight: true
     };
 
     useEffect(() => {
