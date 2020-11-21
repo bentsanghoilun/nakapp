@@ -64,11 +64,8 @@ const CaseDetails = props => {
                             <br></br>
                             <h2 className='box'>{data.client}</h2>
                             <br></br>
-                            <p>
-                                Event: {data.title}
-                                <br></br>
-                                Venue: {data.venue}
-                            </p>
+                            <p>Event: {data.title}</p>
+                            <p>Venue: {data.venue}</p>
                             <br></br>
                             <div className='caseNav'>
                                 {

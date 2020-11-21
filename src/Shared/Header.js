@@ -8,6 +8,7 @@ const Header = props => {
     const [isOpen, setIsOpen] = useState(false);
     return(
         <header className={`header${isOpen?' open':''}`}>
+            <div className={`header-backdrop${isOpen?' open':''}`} onClick={() => {isOpen ? setIsOpen(false):setIsOpen(true)}}></div>
             <p className='copyright'><span style={{fontFamily:'sans-serif'}}>&#169;</span> {new Date().getFullYear()}. NAK Concept LTD.<br></br><br></br>Designed by <a href='https://www.tsanghoilun.com' target='_blank'>TSANGHOILUN</a></p>
             <div>
                 <Link to='/' onClick={() => {isOpen ? setIsOpen(false):setIsOpen(true)}}>Our Works</Link>

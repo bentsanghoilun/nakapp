@@ -31,6 +31,8 @@
 }
 .caseDetails p{
     font-size: medium;
+    padding: 0px 2rem;
+    display: block !important;
 }
 .caseDetails > .gallery{
     width: 60%;
