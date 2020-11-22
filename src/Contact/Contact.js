@@ -19,7 +19,7 @@ const Contact = props => {
     useEffect(() => {
         window.scrollTo(0, 0);
     });
-    const gapik = '%REACT_APP_GOOGLE_API_KEY%';
+    const gapik = process.env.REACT_APP_GOOGLE_API_KEY;
     const defaultProps = {
         center: {lat: 22.2860168, lng: 114.151326}, 
         zoom: 19
